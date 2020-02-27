@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-6">
+    <select name="" id="" class="form-control form-control-sm" [(ngModel)]=recordsPerPage (select)="getPageCount()">
+      <option *ngFor='let rowNum of rowPerPageList, let i=index ' [value]=rowNum>
+        {{rowNum}}
+      </option>
+    </select>
+  </div>
+  <div class="col-6">
+    <nav >
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item" *ngFor="let page of pages">
+          <a class="page-link">{{page}}</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>

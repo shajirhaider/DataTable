@@ -1,0 +1,16 @@
+<div>
+    <table>
+        <thead>
+            <th *ngFor="let head of header">
+                {{head.text}}
+            </th>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let d of data" (click) = goRoute()>
+                <td *ngFor = "let head of header">
+                    <span>{{d[head.value]}}</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
